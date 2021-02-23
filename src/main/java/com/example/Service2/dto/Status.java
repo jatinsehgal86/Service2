@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.example.Service2.domain;
+package com.example.Service2.dto;
 
 /**
  * @author user

@@ -1,7 +1,10 @@
 /**
  * 
  */
-package com.example.Service2.domain;
+package com.example.Service2.dto;
+
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 /**
  * @author user
@@ -25,12 +28,14 @@ public class Resource {
 
 	private Long id;
 
+	@NotNull(message = "Name cannot be empty.")
 	private String name;
 
+	@Min(value = 1, message = "Age should be greater than 0")
 	private Integer age;
 
 	private String address;
-
+	
 	/**
 	 * @return the name
 	 */
