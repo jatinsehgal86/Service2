@@ -38,7 +38,7 @@ public class ResourceController {
 	public ResponseEntity<Resource> getResource(@RequestParam(name = "id") Long id) {
 		LOGGER.info("Entering the get Resource call for id " + id);
 		ResponseEntity<Resource> responseEntity = null;
-		String resourceUrl = "http://hostname:8010/service1/getResource1";
+		String resourceUrl = "http://localhost:8010/service1/getResource1";
 		responseEntity = restTemplate.getForEntity(resourceUrl + "?id=" + id, Resource.class);
 		LOGGER.info("Exiting the get Resource call for id " + id + " with response code " + responseEntity.getStatusCode());
 		return responseEntity;
